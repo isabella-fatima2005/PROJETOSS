@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pagamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #6f42c1; /* Cor roxa */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #5a32a3; /* Tom mais escuro de roxo para o hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Pagar Agora</h2>
+    <form id="payment-form">
+        <div class="form-group">
+            <label for="name">Nome do Titular do Cartão</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="card-number">Número do Cartão</label>
+            <input type="text" id="card-number" name="card-number" required placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="form-group">
+            <label for="expiry-date">Data de Validade (MM/AA)</label>
+            <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/AA">
+        </div>
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="number" id="cvv" name="cvv" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <input type="submit" value="Pagar">
+    </form>
+</div>
+
+</body>
+</html>
